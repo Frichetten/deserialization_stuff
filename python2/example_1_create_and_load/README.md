@@ -12,7 +12,7 @@ To run the script please use the following commands:
 
 ```bash
 cd /app  
-python index.py
+python pickler.py
 ```
 
 The output of ls shows the command was executed.  
