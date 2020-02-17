@@ -1,12 +1,11 @@
-from flask import Flask
-from flask import request
+#!/usr/bin/env python2
+from flask import Flask, request
 import cPickle
 
 app = Flask(__name__)
 
 @app.route('/')
 def home():
-    print request.args.get('pickle')
     cPickle.loads(str(request.args.get('pickle')))
     return finished()
 
